@@ -1,0 +1,15 @@
+{
+  "favorites": [
+    {
+      "id": "1",
+      "name": "one peace"
+    }
+  ],
+  "library": [
+    {
+      "id": "2",
+      "name": "hello 2"
+    }
+  ],
+  "ratings": []
+}
