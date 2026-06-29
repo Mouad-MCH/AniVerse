@@ -46,7 +46,7 @@ export const addRating = async (rating) => {
 export const updateRating = async (id, rating) => {
     const res = await fetch(`${URL_BASE}/ratings/${id}`, {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/josn' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(rating)
     });
 

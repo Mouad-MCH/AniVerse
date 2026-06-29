@@ -1,5 +1,7 @@
 import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/layout/Navbar"
+import Landing from "./pages/Landing"
+import AnimeList from "./pages/AnimeList"
 
 
 const App = () => {
@@ -7,9 +9,9 @@ const App = () => {
     <>
       <Navbar/>
       <Routes>
-      
-        <Route path="/" element={<h1 className="mt-20">Landing page</h1>} />
-        <Route path="/anime" element={<h1 className="mt-20"> Anime list </h1>} />
+
+        <Route path="/" element={<Landing />} />
+        <Route path="/anime" element={<AnimeList />} />
         <Route path="/anime/:id" element={<h1 className="mt-20">Anime detail</h1>} />
         <Route path="/anime/:id/characters" element={<h1>Anime characters</h1>} />
         <Route path="/characters" element={<h1 className="mt-20">Characters list</h1>} />

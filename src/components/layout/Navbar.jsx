@@ -24,7 +24,7 @@ const Navbar = () => {
           {
             links.map(({to, label}) => (
               <NavLink
-                to={to}
+                key={to}
                 to={to}
                 end={to === "/"}
                 className={({isActive}) => 

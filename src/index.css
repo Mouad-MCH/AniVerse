@@ -127,4 +127,64 @@
     background-position: right 1rem center;
     background-size: 1em;
   }
+
+  .skeleton {
+    background: linear-gradient(90deg, #1f1f25 25%, #2a292f 50%, #1f1f25 75%);
+    background-size: 800px 100%;
+    animation: shimmer 1.8s infinite linear;
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: -800px 0; }
+    100% { background-position:  800px 0; }
+  }
+}
+
+@layer components {
+  .error_icon {
+    & .icon {
+      background: rgba(147,0,10,0.15);
+
+      & span {
+        font-size: 76px; color: #ffb4ab; font-variation-settings: 'FILL' 0, 'wght' 300;
+      }
+    }
+  }
+
+  .error_actions {
+    font-size: 16px; font-variation-settings: 'FILL' 0;
+  }
+
+  .btn-primary {
+    background: #c9a84c; color: #3d2e00; border: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; padding: 14px 32px;
+    cursor: pointer; transition: background 0.2s, transform 0.1s;
+  }
+  .btn-primary:hover { background: #e6c364; transform: translateY(-1px); }
+
+  .empty-icon-wrap {
+    width: 96px; height: 96px;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(201, 168, 76, 0.05);
+    position: relative;
+  }
+  .empty-icon-wrap .corner { position: absolute; width: 10px; height: 10px; }
+  .empty-icon-wrap .tl { top: -1px;    left: -1px;  border-top: 1px solid #c9a84c; border-left:  1px solid #c9a84c; }
+  .empty-icon-wrap .tr { top: -1px;    right: -1px; border-top: 1px solid #c9a84c; border-right: 1px solid #c9a84c; }
+  .empty-icon-wrap .bl { bottom: -1px; left: -1px;  border-bottom: 1px solid #c9a84c; border-left:  1px solid #c9a84c; }
+  .empty-icon-wrap .br { bottom: -1px; right: -1px; border-bottom: 1px solid #c9a84c; border-right: 1px solid #c9a84c; }
+
+  .btn-secondary {
+    background: transparent; color: #c9a84c;
+    border: 1px solid #c9a84c;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px; font-weight: 600; letter-spacing: 0.15em;
+    text-transform: uppercase; padding: 14px 32px;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .btn-secondary:hover { background: rgba(201,168,76,0.1); }
+  
 }
