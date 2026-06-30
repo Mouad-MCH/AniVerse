@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/layout/Navbar"
 import Landing from "./pages/Landing"
 import AnimeList from "./pages/AnimeList"
+import AnimeDetail from "./pages/AnimeDetail"
 
 
 const App = () => {
@@ -12,7 +13,7 @@ const App = () => {
 
         <Route path="/" element={<Landing />} />
         <Route path="/anime" element={<AnimeList />} />
-        <Route path="/anime/:id" element={<h1 className="mt-20">Anime detail</h1>} />
+        <Route path="/anime/:id" element={<AnimeDetail />} />
         <Route path="/anime/:id/characters" element={<h1>Anime characters</h1>} />
         <Route path="/characters" element={<h1 className="mt-20">Characters list</h1>} />
         <Route path="/characters/:id" element={<h1>character Profile</h1>} />

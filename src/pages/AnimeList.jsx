@@ -1,6 +1,5 @@
 import { useState, useEffect, useCallback } from "react"
 import { Search } from "lucide-react"
-import AnimeCard from "../components/anime/AnimeCard"
 import LoadingSpinner from "../components/ui/LoadingSpinner"
 import ErrorMessage from "../components/ui/ErrorMessage"
 import EmptyState from "../components/ui/EmptyState"
@@ -8,6 +7,8 @@ import Pagination from "../components/ui/Pagination"
 import { getAnimeList } from "../services/jikan"
 import { SearchX } from "lucide-react"
 import AnimeGrid from "../components/anime/AnimeGrid"
+import { useDispatch, useSelector } from "react-redux"
+import { clearFilters, fetchAnimes, setGenre, setInputValue, setPage, setQuery, setType } from "../store/animeSlice"
 
 const GENRES = [
   { id: "",  name: "All Genres" },
@@ -33,25 +34,26 @@ const TYPES = [
 
 const AnimeList = () => {
 
-    
-    const [inputValue, setInputValue] = useState("");
-    const [genre, setGenre] = useState("")
-    const [type, setType] = useState("")
-    const [query, setQuery] = useState("")
-    
-    const [animes, setAnimes] = useState([])
-    const [page, setPage] = useState(1)
-    const [totalPages, setTotalPages] = useState(10)
+  const { animes, loading, error, page, totalPages, inputValue, query, genre, type } = useSelector(state => state.anime);
 
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(null)
+  const dispatch = useDispatch()
 
-    
+    useEffect(() => {
+      const timer = setTimeout(() => {
+         dispatch(setQuery(inputValue))
+      }, 600)
+
+      return () => clearTimeout(timer)
+    }, [inputValue])
+
+    useEffect(() => {
+      dispatch(fetchAnimes())
+    }, [query, genre, type, page, dispatch])
 
 
-    const handleGenreChange = (e) => { setGenre(e.target.value); setPage(1) };
-    const handleTypeChange = (e) => { setType(e.target.value); setPage(1) }
-    const handleClear = () => { setInputValue(""); setPage(1); setGenre(""); setType(""); setQuery("") }
+    const handleGenreChange = (e) => { dispatch(setGenre(e.target.value)) };
+    const handleTypeChange = (e) => { dispatch(setType(e.target.value)) }
+    const handleClear = () => { dispatch(clearFilters()) }
 
   return (
     <main className="pt-32 pb-24 px-5 md:px-16 max-w-360 mx-auto w-full">
@@ -72,7 +74,7 @@ const AnimeList = () => {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-primary" size={18} />
             <input type="text" 
               value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
+              onChange={(e) => dispatch(setInputValue(e.target.value))}
               placeholder="Search the archives..."
               className=" w-full border border-primary/50 bg-background text-on-surface pl-12 pr-4 py-3
                           focus:outline-none foucs:border-primary font-body transition-colors placeholder:text-on-surface-variant/50"
@@ -110,7 +112,7 @@ const AnimeList = () => {
         loading ? (
             <LoadingSpinner variant="skeleton" count={20} />
         ): error ? (
-            <ErrorMessage detail={error.message} />
+            <ErrorMessage detail={error.message} onRetry={() => fetchAnimes(query, genre, type,)} />
         ): animes.length === 0 ? (
             <EmptyState 
               icon={ SearchX }
@@ -126,7 +128,7 @@ const AnimeList = () => {
              <div className="mb-10">
                 <AnimeGrid animes={animes}/>
              </div>
-             <Pagination page={page} totalPages={totalPages} onPageChange={setPage} />
+             <Pagination page={page} totalPages={totalPages} onPageChange={(p) => dispatch(setPage(p))} />
             </>
         )
       }
