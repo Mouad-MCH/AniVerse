@@ -59,3 +59,16 @@ export const getCharacterById = async (id) => {
 
     return data.data
 }
+
+export const getCharacters = async ({ query = "", page = 1 } = {}) => {
+    const params = new URLSearchParams({ page, limit: 24 })
+    if (query) params.set("q", query)
+
+    const res  = await fetch(`${URL_BASE}/characters?${params}`)
+    const json = await res.json()
+
+    return {
+        data:       json.data ?? [],
+        totalPages: json.pagination?.last_visible_page ?? 1,
+    }
+}

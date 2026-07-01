@@ -3,13 +3,203 @@
     {
       "id": "1",
       "name": "one peace"
+    },
+    {
+      "animeId": 61469,
+      "title": "Steel Ball Run: JoJo no Kimyou na Bouken",
+      "image": "https://cdn.myanimelist.net/images/anime/1448/154111l.jpg",
+      "score": 9.11,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Mystery",
+        "Supernatural"
+      ],
+      "episodes": null,
+      "id": "lDbilkcxj04"
+    },
+    {
+      "animeId": 269,
+      "title": "Bleach",
+      "image": "https://cdn.myanimelist.net/images/anime/1541/147774l.jpg",
+      "score": 8,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Supernatural"
+      ],
+      "episodes": 366,
+      "id": "vBYrQM5apn0"
+    },
+    {
+      "animeId": 5114,
+      "title": "Fullmetal Alchemist: Brotherhood",
+      "image": "https://cdn.myanimelist.net/images/anime/1208/94745l.jpg",
+      "score": 9.11,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
+      "episodes": 64,
+      "id": "hoLly2aYupc"
+    },
+    {
+      "animeId": 53447,
+      "title": "Tu Bian Yingxiong X",
+      "image": "https://cdn.myanimelist.net/images/anime/1492/150628l.jpg",
+      "score": 8.67,
+      "genres": [
+        "Action"
+      ],
+      "episodes": 24,
+      "id": "rPTTniLTmZU"
+    },
+    {
+      "animeId": 56752,
+      "title": "Shiguang Dailiren: Yingdu Pian",
+      "image": "https://cdn.myanimelist.net/images/anime/1496/147189l.jpg",
+      "score": 8.3,
+      "genres": [
+        "Drama"
+      ],
+      "episodes": 6,
+      "id": "3xXOn6wtG1Q"
+    },
+    {
+      "animeId": 44074,
+      "title": "Shiguang Dailiren",
+      "image": "https://cdn.myanimelist.net/images/anime/1135/114867l.jpg",
+      "score": 8.7,
+      "genres": [
+        "Drama",
+        "Mystery",
+        "Suspense"
+      ],
+      "episodes": 11,
+      "id": "KjCmtQJ2um4"
     }
   ],
   "library": [
     {
       "id": "2",
       "name": "hello 2"
+    },
+    {
+      "animeId": 6,
+      "title": "Trigun",
+      "image": "https://cdn.myanimelist.net/images/anime/1130/120002l.jpg",
+      "status": "Completed",
+      "episodes": 26,
+      "id": "bj2KK9OkZFk"
+    },
+    {
+      "animeId": 5,
+      "title": "Cowboy Bebop: Tengoku no Tobira",
+      "image": "https://cdn.myanimelist.net/images/anime/1439/93480l.jpg",
+      "status": "Plan To Watch",
+      "episodes": 1,
+      "id": "_D8CB5eVeQU"
+    },
+    {
+      "animeId": 269,
+      "title": "Bleach",
+      "image": "https://cdn.myanimelist.net/images/anime/1541/147774l.jpg",
+      "status": "Watching",
+      "episodes": 366,
+      "id": "NkJKHm7DGNo"
+    },
+    {
+      "animeId": 15,
+      "title": "Eyeshield 21",
+      "image": "https://cdn.myanimelist.net/images/anime/1079/133529l.jpg",
+      "status": "Plan To Watch",
+      "episodes": 145,
+      "id": "RsMAynSs6f0"
+    },
+    {
+      "animeId": 5114,
+      "title": "Fullmetal Alchemist: Brotherhood",
+      "image": "https://cdn.myanimelist.net/images/anime/1208/94745l.jpg",
+      "status": "Plan To Watch",
+      "episodes": 64,
+      "id": "PNzAZQ46mFw"
+    },
+    {
+      "animeId": 9253,
+      "title": "Steins;Gate",
+      "image": "https://cdn.myanimelist.net/images/anime/1935/127974l.jpg",
+      "status": "Plan To Watch",
+      "episodes": 24,
+      "id": "7YlRY4QdPDI"
+    },
+    {
+      "animeId": 49818,
+      "title": "Guimi Zhi Zhu: Xiaochou Pian",
+      "image": "https://cdn.myanimelist.net/images/anime/1952/149229l.jpg",
+      "status": "Plan To Watch",
+      "episodes": 13,
+      "id": "zxptrjj01EY"
+    },
+    {
+      "animeId": 53447,
+      "title": "Tu Bian Yingxiong X",
+      "image": "https://cdn.myanimelist.net/images/anime/1492/150628l.jpg",
+      "status": "Plan To Watch",
+      "episodes": 24,
+      "id": "S8iXgk12SRo"
+    },
+    {
+      "animeId": 56752,
+      "title": "Shiguang Dailiren: Yingdu Pian",
+      "image": "https://cdn.myanimelist.net/images/anime/1496/147189l.jpg",
+      "status": "Plan To Watch",
+      "episodes": 6,
+      "id": "cfe-89iH3Ig"
+    },
+    {
+      "animeId": 44074,
+      "title": "Shiguang Dailiren",
+      "image": "https://cdn.myanimelist.net/images/anime/1135/114867l.jpg",
+      "status": "Plan To Watch",
+      "episodes": 11,
+      "id": "HK5in760cTA"
     }
   ],
-  "ratings": []
+  "ratings": [
+    {
+      "animeId": 6,
+      "title": "Trigun",
+      "image": "https://cdn.myanimelist.net/images/anime/1130/120002l.jpg",
+      "score": 4,
+      "note": ";jhliuglg",
+      "id": "CRbZC0BghhI"
+    },
+    {
+      "animeId": 5,
+      "title": "Cowboy Bebop: Tengoku no Tobira",
+      "image": "https://cdn.myanimelist.net/images/anime/1439/93480l.jpg",
+      "score": 3,
+      "note": "fkvfkvn",
+      "id": "xDLKoRbreFg"
+    },
+    {
+      "animeId": 269,
+      "title": "Bleach",
+      "image": "https://cdn.myanimelist.net/images/anime/1541/147774l.jpg",
+      "score": 2,
+      "note": "note....",
+      "id": "z6J-xSmnRvM"
+    },
+    {
+      "animeId": 5114,
+      "title": "Fullmetal Alchemist: Brotherhood",
+      "image": "https://cdn.myanimelist.net/images/anime/1208/94745l.jpg",
+      "score": 10,
+      "note": "TAHA recommendation",
+      "id": "pd74W7gh8yU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

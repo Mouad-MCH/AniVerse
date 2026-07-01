@@ -93,6 +93,14 @@
 }
 
 @layer utilities {
+  .gold-glow {
+    box-shadow: inset 0 0 0 1px rgba(201, 168, 76, 0.2);
+    transition: box-shadow 0.3s ease;
+  }
+  .gold-glow:hover {
+    box-shadow: inset 0 0 0 1px rgba(201, 168, 76, 0.4), 0 0 30px rgba(201, 168, 76, 0.15);
+  }
+
   .anime-card-inner {
     box-shadow: inset 0 0 0 1px rgba(201, 168, 76, 0.2);
     transition: all 0.3s ease;

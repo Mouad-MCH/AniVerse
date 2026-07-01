@@ -1,11 +1,9 @@
-import { useState, useEffect, useCallback } from "react"
-import { Search } from "lucide-react"
+import { useEffect } from "react"
+import { Search, SearchX } from "lucide-react"
 import LoadingSpinner from "../components/ui/LoadingSpinner"
 import ErrorMessage from "../components/ui/ErrorMessage"
 import EmptyState from "../components/ui/EmptyState"
 import Pagination from "../components/ui/Pagination"
-import { getAnimeList } from "../services/jikan"
-import { SearchX } from "lucide-react"
 import AnimeGrid from "../components/anime/AnimeGrid"
 import { useDispatch, useSelector } from "react-redux"
 import { clearFilters, fetchAnimes, setGenre, setInputValue, setPage, setQuery, setType } from "../store/animeSlice"
@@ -112,7 +110,7 @@ const AnimeList = () => {
         loading ? (
             <LoadingSpinner variant="skeleton" count={20} />
         ): error ? (
-            <ErrorMessage detail={error.message} onRetry={() => fetchAnimes(query, genre, type,)} />
+            <ErrorMessage detail={error} onRetry={() => dispatch(fetchAnimes())} />
         ): animes.length === 0 ? (
             <EmptyState 
               icon={ SearchX }
