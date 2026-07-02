@@ -32,7 +32,7 @@ const ErrorMessage = ({ message = "Unable to fetch data. Please check your conne
       {detail && (
         <div className="w-full max-w-md border border-error/20 bg-error-container/10 p-4 mb-10 text-left">
           <p className="font-label text-error/60 uppercase tracking-widest text-xs mb-2">Error Details</p>
-          <p className="font-body text-error/80 font-mono text-sm">{detail}</p>
+          <p className="text-error/80 font-mono text-sm">{detail}</p>
         </div>
       )}
 

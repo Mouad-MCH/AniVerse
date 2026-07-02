@@ -42,7 +42,7 @@ const AnimeList = () => {
       }, 600)
 
       return () => clearTimeout(timer)
-    }, [inputValue])
+    }, [inputValue, dispatch])
 
     useEffect(() => {
       dispatch(fetchAnimes())
