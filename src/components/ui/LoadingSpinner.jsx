@@ -2,7 +2,7 @@
 // variant="skeleton" → shimmer card grid  (for list pages)
 
 const SkeletonCard = () => (
-  <div className="flex flex-col aspect-[2/3]">
+  <div className="flex flex-col aspect-2/3">
     <div className="skeleton flex-1 rounded-sm" />
   </div>
 )

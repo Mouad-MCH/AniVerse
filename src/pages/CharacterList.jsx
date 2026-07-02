@@ -16,7 +16,6 @@ const CharacterList = () => {
   const [page,        setPage]        = useState(1)
   const [totalPages,  setTotalPages]  = useState(1)
 
-  // Debounce search input
   useEffect(() => {
     const timer = setTimeout(() => {
       setQuery(inputValue)
@@ -25,7 +24,7 @@ const CharacterList = () => {
     return () => clearTimeout(timer)
   }, [inputValue])
 
-  // Fetch characters
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true)
@@ -44,10 +43,10 @@ const CharacterList = () => {
   }, [query, page])
 
   return (
-    <main className="flex-grow pt-[100px]">
+    <main className="grow pt-25">
 
       {/* ── Header & Search ───────────────────────────────────────────────── */}
-      <section className="max-w-[1440px] mx-auto px-5 md:px-16 py-16 flex flex-col items-center text-center">
+      <section className="max-w-360 mx-auto px-5 md:px-16 py-16 flex flex-col items-center text-center">
         <h1 className="font-cinzel text-4xl md:text-6xl text-primary font-bold tracking-wider uppercase mb-6">
           Characters
         </h1>
@@ -73,7 +72,7 @@ const CharacterList = () => {
       </section>
 
       {/* ── Grid ─────────────────────────────────────────────────────────── */}
-      <section className="max-w-[1440px] mx-auto px-5 md:px-16 pb-24">
+      <section className="max-w-360 mx-auto px-5 md:px-16 pb-24">
         {loading ? (
           <LoadingSpinner variant="skeleton" count={24} />
         ) : error ? (
@@ -98,7 +97,7 @@ const CharacterList = () => {
                   <div className="bg-surface border border-[rgba(201,168,76,0.2)] group-hover:border-primary-container group-hover:shadow-[0_0_30px_rgba(201,168,76,0.15)] transition-all duration-500 h-full flex flex-col">
 
                     {/* Image */}
-                    <div className="aspect-[3/4] w-full overflow-hidden relative">
+                    <div className="aspect-3/4 w-full overflow-hidden relative">
                       {images?.jpg?.image_url
                         ? <img
                             src={images.jpg.image_url}
@@ -109,11 +108,11 @@ const CharacterList = () => {
                             No image
                           </div>
                       }
-                      <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60 pointer-events-none" />
+                      <div className="absolute inset-0 bg-linear-to-t from-surface to-transparent opacity-60 pointer-events-none" />
                     </div>
 
                     {/* Name */}
-                    <div className="p-4 text-center bg-surface flex-grow flex items-center justify-center border-t border-[rgba(201,168,76,0.1)]">
+                    <div className="p-4 text-center bg-surface grow flex items-center justify-center border-t border-[rgba(201,168,76,0.1)]">
                       <h2 className="font-headline text-on-surface group-hover:text-primary transition-colors font-bold uppercase text-base leading-snug">
                         {name}
                       </h2>

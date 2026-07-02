@@ -28,15 +28,15 @@ const CharacterProfile = () => {
     fetchData()
   }, [id])
 
-  // ── Async states ────────────────────────────────────────────────────────
+
   if (loading) return (
-    <main className="pt-32 pb-24 px-5 md:px-16 max-w-[1440px] mx-auto w-full">
+    <main className="pt-32 pb-24 px-5 md:px-16 max-w-360 mx-auto w-full">
       <LoadingSpinner variant="skeleton" count={6} />
     </main>
   )
 
   if (error) return (
-    <main className="pt-32 pb-24 px-5 md:px-16 max-w-[1440px] mx-auto w-full">
+    <main className="pt-32 pb-24 px-5 md:px-16 max-w-360 mx-auto w-full">
       <ErrorMessage detail={error} onRetry={() => window.location.reload()} />
     </main>
   )
@@ -47,18 +47,16 @@ const CharacterProfile = () => {
   const nicknames = character.nicknames ?? []
   const animes    = character.anime     ?? []
 
-  // Split "about" into paragraphs on double newlines
   const paragraphs = (character.about ?? "No description available.")
     .split(/\n{2,}/)
     .map(p => p.trim())
     .filter(Boolean)
-    .slice(0, 4)   // cap at 4 paragraphs for readability
+    .slice(0, 4)   
 
   return (
     <main className="min-h-screen flex flex-col bg-background text-on-surface">
 
-      {/* ── Back link ────────────────────────────────────────────────────── */}
-      <header className="w-full px-5 md:px-16 py-6 max-w-[1440px] mx-auto border-b border-outline-variant/30 pt-24">
+      <header className="w-full px-5 md:px-16 py-6 max-w-360 mx-auto border-b border-outline-variant/30 pt-24">
         <Link
           to="/characters"
           className="inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors font-body text-base group"
@@ -68,17 +66,17 @@ const CharacterProfile = () => {
         </Link>
       </header>
 
-      <div className="flex-grow px-5 md:px-16 py-12 md:py-24 max-w-[1440px] mx-auto w-full flex flex-col gap-16 relative">
+      <div className="grow px-5 md:px-16 py-12 md:py-24 max-w-360 mx-auto w-full flex flex-col gap-16 relative">
 
-        {/* Subtle radial gold glow */}
+        
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-3/4 bg-primary/5 blur-[120px] rounded-full pointer-events-none z-0" />
 
-        {/* ── Hero: Portrait + Details ────────────────────────────────────── */}
+        
         <section className="flex flex-col lg:flex-row gap-6 md:gap-16 items-start relative z-10 w-full">
 
           {/* Portrait */}
-          <div className="w-full lg:w-5/12 flex-shrink-0 group">
-            <div className="relative w-full aspect-[2/3] bg-surface-container overflow-hidden gold-glow">
+          <div className="w-full lg:w-5/12 shrink-0 group">
+            <div className="relative w-full aspect-2/3 bg-surface-container overflow-hidden gold-glow">
               {image
                 ? <img
                     src={image}
@@ -96,7 +94,7 @@ const CharacterProfile = () => {
           {/* Details */}
           <div className="w-full lg:w-7/12 flex flex-col gap-6 pt-4 lg:pt-8">
 
-            {/* Name + nicknames */}
+            
             <div>
               <h1 className="font-cinzel text-3xl md:text-5xl text-primary-container mb-2 uppercase tracking-widest">
                 {character.name}
@@ -117,7 +115,7 @@ const CharacterProfile = () => {
 
             <div className="ornamental-divider w-full max-w-md" />
 
-            {/* Description */}
+           
             <div className="flex flex-col gap-4 max-w-3xl">
               {paragraphs.map((p, i) => (
                 <p key={i} className="text-on-surface-variant font-body text-base leading-relaxed">
@@ -126,7 +124,7 @@ const CharacterProfile = () => {
               ))}
             </div>
 
-            {/* Action buttons */}
+            
             <div className="mt-2 flex gap-4">
               <button className="bg-primary-container text-on-primary font-label text-[11px] uppercase px-6 py-3 hover:bg-primary transition-colors flex items-center gap-2">
                 Add to Favorites
@@ -139,7 +137,7 @@ const CharacterProfile = () => {
           </div>
         </section>
 
-        {/* ── Appears In ─────────────────────────────────────────────────── */}
+       
         {animes.length > 0 && (
           <section className="flex flex-col gap-8 relative z-10 w-full">
             <h2 className="font-headline text-xl text-on-surface border-b border-primary-container/20 pb-2 inline-block max-w-fit uppercase tracking-widest">
@@ -151,10 +149,10 @@ const CharacterProfile = () => {
                 <Link
                   key={anime.mal_id}
                   to={`/anime/${anime.mal_id}`}
-                  className="flex-shrink-0 w-[200px] flex flex-col gap-3 snap-start group cursor-pointer"
+                  className="shrink-0 w-50 flex flex-col gap-3 snap-start group cursor-pointer"
                 >
                   <div
-                    className="w-full aspect-[2/3] overflow-hidden bg-surface-container relative"
+                    className="w-full aspect-2/3 overflow-hidden bg-surface-container relative"
                     style={{ boxShadow: "inset 0 0 0 1px rgba(201,168,76,0.2)", transition: "box-shadow 0.3s" }}
                   >
                     {anime.images?.jpg?.large_image_url

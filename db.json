@@ -1,10 +1,6 @@
 {
   "favorites": [
     {
-      "id": "1",
-      "name": "one peace"
-    },
-    {
       "animeId": 61469,
       "title": "Steel Ball Run: JoJo no Kimyou na Bouken",
       "image": "https://cdn.myanimelist.net/images/anime/1448/154111l.jpg",
@@ -79,6 +75,19 @@
       ],
       "episodes": 11,
       "id": "KjCmtQJ2um4"
+    },
+    {
+      "animeId": 21,
+      "title": "One Piece",
+      "image": "https://cdn.myanimelist.net/images/anime/1244/138851l.jpg",
+      "score": 8.73,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy"
+      ],
+      "episodes": null,
+      "id": "LXRZMgqLCuw"
     }
   ],
   "library": [
@@ -167,39 +176,6 @@
       "id": "HK5in760cTA"
     }
   ],
-  "ratings": [
-    {
-      "animeId": 6,
-      "title": "Trigun",
-      "image": "https://cdn.myanimelist.net/images/anime/1130/120002l.jpg",
-      "score": 4,
-      "note": ";jhliuglg",
-      "id": "CRbZC0BghhI"
-    },
-    {
-      "animeId": 5,
-      "title": "Cowboy Bebop: Tengoku no Tobira",
-      "image": "https://cdn.myanimelist.net/images/anime/1439/93480l.jpg",
-      "score": 3,
-      "note": "fkvfkvn",
-      "id": "xDLKoRbreFg"
-    },
-    {
-      "animeId": 269,
-      "title": "Bleach",
-      "image": "https://cdn.myanimelist.net/images/anime/1541/147774l.jpg",
-      "score": 2,
-      "note": "note....",
-      "id": "z6J-xSmnRvM"
-    },
-    {
-      "animeId": 5114,
-      "title": "Fullmetal Alchemist: Brotherhood",
-      "image": "https://cdn.myanimelist.net/images/anime/1208/94745l.jpg",
-      "score": 10,
-      "note": "TAHA recommendation",
-      "id": "pd74W7gh8yU"
-    }
-  ],
+  "ratings": [],
   "$schema": "./node_modules/json-server/schema.json"
 }
