@@ -15,19 +15,6 @@
       "id": "lDbilkcxj04"
     },
     {
-      "animeId": 269,
-      "title": "Bleach",
-      "image": "https://cdn.myanimelist.net/images/anime/1541/147774l.jpg",
-      "score": 8,
-      "genres": [
-        "Action",
-        "Adventure",
-        "Supernatural"
-      ],
-      "episodes": 366,
-      "id": "vBYrQM5apn0"
-    },
-    {
       "animeId": 5114,
       "title": "Fullmetal Alchemist: Brotherhood",
       "image": "https://cdn.myanimelist.net/images/anime/1208/94745l.jpg",
@@ -99,7 +86,7 @@
       "animeId": 6,
       "title": "Trigun",
       "image": "https://cdn.myanimelist.net/images/anime/1130/120002l.jpg",
-      "status": "Completed",
+      "status": "Plan To Watch",
       "episodes": 26,
       "id": "bj2KK9OkZFk"
     },
@@ -176,6 +163,15 @@
       "id": "HK5in760cTA"
     }
   ],
-  "ratings": [],
+  "ratings": [
+    {
+      "animeId": 5114,
+      "title": "Fullmetal Alchemist: Brotherhood",
+      "image": "https://cdn.myanimelist.net/images/anime/1208/94745l.jpg",
+      "score": 10,
+      "note": "i plan to watch that anime",
+      "id": "5Ny9SGuu3zA"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }
