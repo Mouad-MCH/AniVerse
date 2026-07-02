@@ -6,8 +6,8 @@ import useRating      from "../hooks/useRating"
 import useLibrary     from "../hooks/useLibrary"
 import LoadingSpinner from "../components/ui/LoadingSpinner"
 import ErrorMessage   from "../components/ui/ErrorMessage"
+import { LIBRARY_STATUSES } from "../utils/constent.js"
 
-const LIBRARY_STATUSES = ["Plan To Watch", "Watching", "Completed"]
 
 const AnimeDetail = () => {
   const { id } = useParams()
@@ -41,7 +41,7 @@ const AnimeDetail = () => {
 
 
   return (
-    <main className="flex-grow flex flex-col">
+    <main className="grow flex flex-col">
 
       {/* ── Hero Banner ───────────────────────────────────────────────────── */}
       <section className="relative w-full min-h-[80vh] flex items-center justify-center overflow-hidden pt-[88px]">
@@ -50,15 +50,15 @@ const AnimeDetail = () => {
         <div className="absolute inset-0 z-0">
           {bgImage && <img src={bgImage} alt="" className="w-full h-full object-cover" />}
           <div className="absolute inset-0 bg-background/80" />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-background via-transparent to-transparent" />
         </div>
 
-        <div className="relative z-10 max-w-[1440px] mx-auto px-5 md:px-16 w-full py-16">
+        <div className="relative z-10 max-w-360 mx-auto px-5 md:px-16 w-full py-16">
           <div className="flex flex-col md:flex-row gap-6 items-start">
 
             {/* Poster */}
-            <div className="w-full md:w-1/3 flex-shrink-0">
-              <div className="relative w-full aspect-[2/3] overflow-hidden border-4 border-primary-container shadow-[0_0_40px_rgba(201,168,76,0.15)] group">
+            <div className="w-full md:w-1/3 shrink-0">
+              <div className="relative w-full aspect-2/3 overflow-hidden border-4 border-primary-container shadow-[0_0_40px_rgba(201,168,76,0.15)] group">
                 <img
                   src={anime.images?.jpg?.large_image_url}
                   alt={anime.title}

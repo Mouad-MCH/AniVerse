@@ -1,0 +1,1 @@
+export const LIBRARY_STATUSES = ["Plan To Watch", "Watching", "Completed"]

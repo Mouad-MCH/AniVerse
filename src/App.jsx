@@ -8,6 +8,7 @@ import CharacterList    from "./pages/CharacterList"
 import CharacterProfile from "./pages/CharacterProfile"
 import Favorites  from "./pages/Favorites"
 import MyRatings  from "./pages/MyRatings"
+import MyLibrary  from "./pages/MyLibrary"
 
 
 const App = () => {
@@ -24,7 +25,7 @@ const App = () => {
         <Route path="/characters/:id" element={<CharacterProfile />} />
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/my-ratings" element={<MyRatings />} />
-        <Route path="/my-library" element={<h1 className="mt-20">My Library</h1>} />
+        <Route path="/my-library" element={<MyLibrary />} />
         <Route path="/dashboard" element={<h1 className="mt-20">Dashboard</h1>} />
 
       </Routes>
