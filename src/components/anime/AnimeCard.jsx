@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom"
 //   genres: [{ mal_id: 1, name: "Action" }, { mal_id: 2, name: "Adventure" }],
 // }
 
-const AnimeCard = ({ anime, isFavorit, remove }) => {
+const AnimeCard = ({ anime, isFavorit, remove, isLibrary }) => {
   const navigate = useNavigate()
 
   const {
@@ -40,11 +40,27 @@ const AnimeCard = ({ anime, isFavorit, remove }) => {
       className="anime-card group relative aspect-2/3 rounded-sm overflow-hidden bg-on-secondary-fixed cursor-pointer"
       onClick={() => navigate(`/anime/${mal_id || anime.animeId}`)}
     >
+
+      {
+        isLibrary && (
+          <span
+            className={
+              `absolute top-3 right-3 z-30  text-white font-label text-md px-2 py-1 uppercase border rounded-sm
+               ${anime.status === "Watching" ? "border-white/10 bg-on-secondary " : ""}
+                ${anime.status === "Completed" ? "border-primary text-on-success bg-on-primary" : ""}
+                ${anime.status === "Plan To Watch" ? " border-white bg-on-secondary" : ""}
+              `
+            }>
+            {anime.status}
+          </span>
+        )
+      }
+
        {
          isFavorit && (
            <span
              onClick={(e) =>{ e.stopPropagation(); remove(anime.id)}}
-             className='absolute flex items-center bg-background/70 gap-2 top-3 right-3 hover:border-error hover:text-error z-55 border border-primary-container px-2 py-2 text-on-surface-variant font-display font-bold'>
+             className='absolute flex items-center bg-background/70 gap-2 top-3 right-3 hover:border-error hover:text-error z-30 border border-primary-container px-2 py-2 text-on-surface-variant font-display font-bold'>
             REMOVE
             <X />
           </span>

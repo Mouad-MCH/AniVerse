@@ -1,60 +1,25 @@
-import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { ArrowDown, ArrowRight } from "lucide-react"
 import AnimeCard from "../components/anime/AnimeCard"
 import LoadingSpinner from "../components/ui/LoadingSpinner"
 import ErrorMessage from "../components/ui/ErrorMessage"
-import { getTopAnime, getSeasonalAnime } from "../services/jikan"
 import { Element, Link } from "react-scroll"
+import { useLanding } from "../hooks/useLanding"
 
 
 const Landing = () => {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { 
+    trending, 
+    seasonal, 
+    loadingTrending, 
+    loadingSeasonal, 
+    errorTrending, 
+    errorSeasonal, 
+    fetchTrending, 
+    fetchSeasonal } = useLanding();
 
-  const [trending, setTrending] = useState([])
-  const [seasonal, setSeasonal] = useState([])
-
-  const [loadingTrending, setLoadingTrending] = useState(true)
-  const [loadingSeasonal, setLoadingSeasonal] = useState(true)
-
-  const [errorTrending, setErrorTrending] = useState(null)
-  const [errorSeasonal, setErrorSeasonal] = useState(null)
-
-  const fetchTrending = async () => {
-    setLoadingTrending(true)
-    setErrorTrending(null)
-    try {
-      const data = await getTopAnime()
-      setTrending(data.slice(0, 6))
-    } catch (err) {
-      setErrorTrending(err)
-    } finally {
-      setLoadingTrending(false)
-    }
-  }
-
-  const fetchSeasonal = async () => {
-    setLoadingSeasonal(true)
-    setErrorSeasonal(null)
-    try {
-      const data = await getSeasonalAnime()
-      setSeasonal(data.slice(0, 12))
-    } catch (err) {
-      setErrorSeasonal(err)
-    } finally {
-      setLoadingSeasonal(false)
-    }
-  }
-
-  useEffect(() => {
-    const fetchAll = async () => {
-      await fetchTrending()
-      await new Promise(r => setTimeout(r, 1000))
-      await fetchSeasonal()
-    }
-    fetchAll()
-  }, [])
 
   return (
     <main>

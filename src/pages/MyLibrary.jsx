@@ -83,7 +83,7 @@ const MyLibrary = () => {
               onClear={activeStatus != "ALL" ? () => setActiveStatus("ALL") : undefined} 
             />
           ) : (
-            <AnimeGrid animes={filtredAnimes} />
+            <AnimeGrid animes={filtredAnimes} isLibrary />
           )
         }
       </section>

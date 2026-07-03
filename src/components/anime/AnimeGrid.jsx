@@ -46,11 +46,11 @@ import AnimeCard from "./AnimeCard"
 //   },
 // ]
 
-const AnimeGrid = ({ animes, isFavorit, remove }) => {
+const AnimeGrid = ({ animes, isFavorit, remove, isLibrary }) => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
       {animes.map((anime) => (
-        <AnimeCard key={anime.mal_id ?? anime.id} anime={anime} isFavorit={isFavorit} remove={remove} />
+        <AnimeCard key={anime.mal_id ?? anime.id} anime={anime} isFavorit={isFavorit} remove={remove} isLibrary={isLibrary} />
       ))}
     </div>
   )

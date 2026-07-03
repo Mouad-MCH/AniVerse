@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import Navbar from "./components/layout/Navbar"
+import Footer from "./components/layout/Footer"
 import Landing from "./pages/Landing"
 import AnimeList from "./pages/AnimeList"
 import AnimeDetail      from "./pages/AnimeDetail"
@@ -29,7 +30,7 @@ const App = () => {
         <Route path="/dashboard" element={<h1 className="mt-20">Dashboard</h1>} />
 
       </Routes>
-      
+      <Footer />
     </>
 
   )

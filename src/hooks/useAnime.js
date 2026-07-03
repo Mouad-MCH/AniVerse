@@ -15,7 +15,6 @@ export const useAnime = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  // Debounce: update query 600ms after the user stops typing
   useEffect(() => {
     const timer = setTimeout(() => {
       setQuery(inputValue)
@@ -38,9 +37,6 @@ export const useAnime = () => {
     }
   }, [query, genre, type, page])
 
-//   useEffect(() => {
-//     fetchAnimes()
-//   }, [fetchAnimes])
 
   const handleGenreChange = (e) => { setGenre(e.target.value); setPage(1) }
   const handleTypeChange  = (e) => { setType(e.target.value);  setPage(1) }

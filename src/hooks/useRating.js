@@ -19,7 +19,7 @@ const useRating = (id, anime) => {
       setSelectedRating(ratingEntry.score)
       setNote(ratingEntry.note ?? "")
     }
-  }, [ratingEntry?.id])
+  }, [ratingEntry])
 
   const handleSave = async () => {
     if (!selectedRating || saving || !anime) return

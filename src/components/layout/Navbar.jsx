@@ -1,15 +1,7 @@
 import { useState, useEffect } from "react"
 import { NavLink, useLocation } from "react-router-dom"
 import { CircleUser, Menu, X } from "lucide-react"
-
-const links = [
-  { to: '/',           label: 'Home'       },
-  { to: '/anime',      label: 'Anime'      },
-  { to: '/characters', label: 'Characters' },
-  { to: '/favorites',  label: 'Favorites'  },
-  { to: '/my-library', label: 'My Library' },
-  { to: '/dashboard',  label: 'Dashboard'  },
-]
+import { LINKS } from "../../utils/constent.js"
 
 const Navbar = () => {
   const [open, setOpen] = useState(false)
@@ -31,16 +23,16 @@ const Navbar = () => {
   return (
     <>
       <nav className="bg-surface/70 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30">
-        <div className="flex justify-between items-center px-5 md:px-16 py-4 max-w-[1440px] mx-auto">
+        <div className="flex justify-between items-center px-5 md:px-16 py-4 max-w-360 mx-auto">
 
-          {/* Logo */}
+
           <NavLink to="/" className="font-cinzel text-primary text-2xl font-bold tracking-tighter">
             AniVerse
           </NavLink>
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
-            {links.map(({ to, label }) => (
+            {LINKS.map(({ to, label }) => (
               <NavLink
                 key={to}
                 to={to}
@@ -68,8 +60,6 @@ const Navbar = () => {
 
         </div>
       </nav>
-
-      {/* ── Mobile drawer ─────────────────────────────────────────────────── */}
 
       {/* Backdrop */}
       {open && (
@@ -104,7 +94,7 @@ const Navbar = () => {
         <div className="ornamental-divider mb-10" />
 
         <nav className="flex flex-col gap-8">
-          {links.map(({ to, label }) => (
+          {LINKS.map(({ to, label }) => (
             <NavLink
               key={to}
               to={to}

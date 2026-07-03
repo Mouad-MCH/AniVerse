@@ -197,12 +197,12 @@ const AnimeDetail = () => {
         </div>
       </section>
 
-      {/* ── Divider ───────────────────────────────────────────────────────── */}
+      
       <div className="max-w-360 mx-auto w-full px-5 md:px-16 my-8">
         <div className="ornamental-divider" />
       </div>
 
-      {/* ── Trailer ───────────────────────────────────────────────────────── */}
+      {/* ── Trailer ── */}
       {trailerUrl && (
         <>
           <section className="py-8 px-5 md:px-16 max-w-360 mx-auto w-full">
@@ -219,7 +219,7 @@ const AnimeDetail = () => {
         </>
       )}
 
-      {/* ── My Rating section ─────────────────────────────────────────────── */}
+      {/* ── My Rating section ── */}
       <section className="py-8 px-5 md:px-16 max-w-360 mx-auto w-full mb-24">
         <div className="text-center mb-12">
           <h2 className="font-cinzel text-xl text-primary-container uppercase tracking-[0.2em]">— My Rating —</h2>

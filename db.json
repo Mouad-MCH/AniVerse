@@ -94,7 +94,7 @@
       "animeId": 5,
       "title": "Cowboy Bebop: Tengoku no Tobira",
       "image": "https://cdn.myanimelist.net/images/anime/1439/93480l.jpg",
-      "status": "Plan To Watch",
+      "status": "Watching",
       "episodes": 1,
       "id": "_D8CB5eVeQU"
     },
@@ -165,12 +165,20 @@
   ],
   "ratings": [
     {
-      "animeId": 5114,
-      "title": "Fullmetal Alchemist: Brotherhood",
-      "image": "https://cdn.myanimelist.net/images/anime/1208/94745l.jpg",
-      "score": 10,
-      "note": "i plan to watch that anime",
-      "id": "5Ny9SGuu3zA"
+      "animeId": 5,
+      "title": "Cowboy Bebop: Tengoku no Tobira",
+      "image": "https://cdn.myanimelist.net/images/anime/1439/93480l.jpg",
+      "score": 3,
+      "note": "dc,lkd,",
+      "id": "cUELsUzdX8Y"
+    },
+    {
+      "animeId": 16,
+      "title": "Hachimitsu to Clover",
+      "image": "https://cdn.myanimelist.net/images/anime/1301/133577l.jpg",
+      "score": 8,
+      "note": "dlkc,klsdc",
+      "id": "M4Ec5h_-_CM"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
