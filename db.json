@@ -62,19 +62,6 @@
       ],
       "episodes": 11,
       "id": "KjCmtQJ2um4"
-    },
-    {
-      "animeId": 21,
-      "title": "One Piece",
-      "image": "https://cdn.myanimelist.net/images/anime/1244/138851l.jpg",
-      "score": 8.73,
-      "genres": [
-        "Action",
-        "Adventure",
-        "Fantasy"
-      ],
-      "episodes": null,
-      "id": "LXRZMgqLCuw"
     }
   ],
   "library": [
@@ -94,7 +81,7 @@
       "animeId": 5,
       "title": "Cowboy Bebop: Tengoku no Tobira",
       "image": "https://cdn.myanimelist.net/images/anime/1439/93480l.jpg",
-      "status": "Watching",
+      "status": "Completed",
       "episodes": 1,
       "id": "_D8CB5eVeQU"
     },
@@ -168,8 +155,8 @@
       "animeId": 5,
       "title": "Cowboy Bebop: Tengoku no Tobira",
       "image": "https://cdn.myanimelist.net/images/anime/1439/93480l.jpg",
-      "score": 3,
-      "note": "dc,lkd,",
+      "score": 4,
+      "note": "dc,lkd,ff",
       "id": "cUELsUzdX8Y"
     },
     {

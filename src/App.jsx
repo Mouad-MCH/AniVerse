@@ -10,6 +10,7 @@ import CharacterProfile from "./pages/CharacterProfile"
 import Favorites  from "./pages/Favorites"
 import MyRatings  from "./pages/MyRatings"
 import MyLibrary  from "./pages/MyLibrary"
+import Dashboard  from "./pages/Dashboard"
 
 
 const App = () => {
@@ -27,7 +28,7 @@ const App = () => {
         <Route path="/favorites" element={<Favorites />} />
         <Route path="/my-ratings" element={<MyRatings />} />
         <Route path="/my-library" element={<MyLibrary />} />
-        <Route path="/dashboard" element={<h1 className="mt-20">Dashboard</h1>} />
+        <Route path="/dashboard" element={<Dashboard />} />
 
       </Routes>
       <Footer />

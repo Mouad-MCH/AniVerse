@@ -8,7 +8,7 @@ A React SPA for exploring and managing a personal anime collection. Browse anime
 - **Tailwind CSS v4**
 - **Jikan API v4** — anime & character data
 - **JSON Server** — local REST API for user data
-- **Context API** — global state management
+- **Redux Toolkit** + **React-Redux** — global state management
 
 ## Pages
 
@@ -51,21 +51,25 @@ The app runs on `http://localhost:5173` and the JSON Server on `http://localhost
 
 ```
 src/
-├── main.jsx              # Entry point — BrowserRouter + AppProvider
+├── main.jsx              # Entry point — BrowserRouter + Redux Provider
 ├── App.jsx               # Route definitions
 ├── index.css             # Global styles + Tailwind theme
-├── context/
-│   └── AppContext.jsx    # Global state (favorites, ratings, library)
+├── store/                # Redux Toolkit
+│   ├── store.js          # configureStore — anime, favorites, ratings, library
+│   ├── animeSlice.js
+│   ├── favoritesSlice.js
+│   ├── ratingsSlice.js
+│   └── librarySlice.js
 ├── services/
 │   ├── jikan.js          # Jikan API calls
 │   └── localDb.js        # JSON Server CRUD helpers
-├── pages/                # One component per route
+├── pages/                # One component per route (incl. Dashboard.jsx)
 ├── components/
 │   ├── layout/           # Navbar, Footer
 │   ├── anime/            # AnimeCard, AnimeGrid
 │   ├── character/        # CharacterCard
-│   └── ui/               # LoadingSpinner, ErrorMessage, EmptyState, Pagination
-└── hooks/                # Custom hooks (useAnime, useFavorites, ...)
+│   └── ui/                # LoadingSpinner, ErrorMessage, EmptyState, Pagination, StatCard, ...
+└── hooks/                # Custom hooks (useAnime, useFavorite, useRating, useLibrary, useDashboard, ...)
 ```
 
 ## Links
